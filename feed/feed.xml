@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>autumn&#39;s page</title>
+	<subtitle>a digital garden</subtitle>
+	
+	<link href="https://autumns.page/feed/feed.xml" rel="self"/>
+	<link href="https://autumns.page"/>
+	<updated>2021-08-14T05:29:26Z</updated>
+	<id>https://autumns.page</id>
+	<author>
+		<name>autumn</name>
+	</author>
+	
+	<entry>
+		<title>My test post</title>
+		<link href="https://autumns.page/posts/2021/07/test-post/"/>
+		<updated>2021-08-13T22:23:27Z</updated>
+		<id>https://autumns.page/posts/2021/07/test-post/</id>
+                <description>This is just a test post!</description>
+		<content type="html">&lt;p&gt;This is a test post. It&#39;s got footnotes&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://autumns.page/posts/2021/07/test-post/#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;, it&#39;s got &lt;span class=&quot;unifont&quot;&gt;bracketed spans with
+attributes&lt;/span&gt;, and áll sòrŧś of &lt;span class=&quot;unifont&quot;&gt;[ˌd̥aɪ̯.ə̝.ˈkʰɹ̠ɪ.ɾɪks]&lt;/span&gt;!&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot; /&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Here&#39;s the connected information for it. &lt;a href=&quot;https://autumns.page/posts/2021/07/test-post/#fnref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>My test post 4</title>
+		<link href="https://autumns.page/posts/2021/08/test-post-4/"/>
+		<updated>2021-08-13T20:35:58Z</updated>
+		<id>https://autumns.page/posts/2021/08/test-post-4/</id>
+                <description>This is just a test post!</description>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>My test post 3</title>
+		<link href="https://autumns.page/posts/2021/08/test-post-3/"/>
+		<updated>2021-08-13T20:35:51Z</updated>
+		<id>https://autumns.page/posts/2021/08/test-post-3/</id>
+                <description>This is just a test post!</description>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>My test post 2</title>
+		<link href="https://autumns.page/posts/2021/08/test-post-2/"/>
+		<updated>2021-08-13T06:25:00Z</updated>
+		<id>https://autumns.page/posts/2021/08/test-post-2/</id>
+                <description>This is just a test post!</description>
+		<content type="html"></content>
+	</entry>
+</feed>

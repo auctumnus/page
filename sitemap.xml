@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>/posts/2021/08/test-post-2/</loc>
+  </url>
+
+  <url>
+    <loc>/posts/2021/08/test-post-3/</loc>
+  </url>
+
+  <url>
+    <loc>/posts/2021/08/test-post-4/</loc>
+  </url>
+
+  <url>
+    <loc>/posts/2021/07/test-post/</loc>
+  </url>
+
+  <url>
+    <loc>/</loc>
+  </url>
+
+</urlset>

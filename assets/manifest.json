@@ -1,0 +1,14 @@
+{
+  "main.css": "/assets/main.css",
+  "main.js": "/assets/main.js",
+  "fonts/unifont-13.0.06.woff": "/assets/fonts/unifont-13.0.06.woff",
+  "fonts/unifont-13.0.06.woff2": "/assets/fonts/unifont-13.0.06.woff2",
+  "fonts/nextstep.woff": "/assets/fonts/nextstep.woff",
+  "fonts/nextstep-bold.woff": "/assets/fonts/nextstep-bold.woff",
+  "fonts/nextstep.woff2": "/assets/fonts/nextstep.woff2",
+  "fonts/nextstep-bold.woff2": "/assets/fonts/nextstep-bold.woff2",
+  "fonts/nextstep-heading.woff": "/assets/fonts/nextstep-heading.woff",
+  "fonts/nextstep-heading.woff2": "/assets/fonts/nextstep-heading.woff2",
+  "main.js.map": "/assets/main.js.map",
+  "main.css.map": "/assets/main.css.map"
+}
