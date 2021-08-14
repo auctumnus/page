@@ -30,7 +30,6 @@ or see:
 ![Download Team Fortress 2!](assets/static/88x31/team_fortress_get_it.gif)
 ![Use a computer and monitor for this site](assets/static/88x31/computer.gif)
 ![Made with CSS](assets/static/88x31/css2.gif)
-![Published on Neocities](assets/static/88x31/neo_webdesign.gif)
 ![Made with Neovim](assets/static/88x31/neovim.gif)
 ![Let's all love Lain!](assets/static/88x31/lain.jpg)
 ![Play Touhou today!](assets/static/88x31/2hu.gif)
