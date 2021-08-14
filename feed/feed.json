@@ -10,41 +10,21 @@
     "url": "https://autumns.page/contact.html"
   },
   "items": [{
+      "id": "https://autumns.page/posts/2021/08/hello-world/",
+      "url": "https://autumns.page/posts/2021/08/hello-world/",
+      "title": "Hello world!",
+      "content_html": "<p>Hello, world! This is the first post I'm making on my own site, hosted on\nNeocities.</p>\n<p>I wasn't there for the small web - not the web Berners-Lee knew, not the web\n90s kids knew, and just barely what it was in the earliest 10s - but I've seen\nglimpses into the past, before the homogenization and centralization of the web,\nand I'd much rather have a web like that than the one we have now.</p>\n<p>There are a lot of projects trying to approximate this, and we'll probably never\ntruly escape Big Tech (TM), as some might like to call it, at least until some\nsort of global revolution. Until then, I am perfectly happy to scratch out my\nown corner of the nascent indie web.</p>\n<p>Hopefully, I'll write more than I'm used to. A web without content is simply\ninfrastructure, and empty Debian servers are boring.</p>\n",
+      "date_published": "2021-08-14T05:38:08Z",
+      "summary": "My first post and an introduction",
+      "tags": [
+        "introduction"
+      ]
+    },{
       "id": "https://autumns.page/posts/2021/07/test-post/",
       "url": "https://autumns.page/posts/2021/07/test-post/",
       "title": "My test post",
       "content_html": "<p>This is a test post. It's got footnotes<sup class=\"footnote-ref\"><a href=\"https://autumns.page/posts/2021/07/test-post/#fn1\" id=\"fnref1\">[1]</a></sup>, it's got <span class=\"unifont\">bracketed spans with\nattributes</span>, and áll sòrŧś of <span class=\"unifont\">[ˌd̥aɪ̯.ə̝.ˈkʰɹ̠ɪ.ɾɪks]</span>!</p>\n<hr class=\"footnotes-sep\" />\n<section class=\"footnotes\">\n<ol class=\"footnotes-list\">\n<li id=\"fn1\" class=\"footnote-item\"><p>Here's the connected information for it. <a href=\"https://autumns.page/posts/2021/07/test-post/#fnref1\" class=\"footnote-backref\">↩︎</a></p>\n</li>\n</ol>\n</section>\n",
       "date_published": "2021-08-13T22:23:27Z",
-      "summary": "This is just a test post!",
-      "tags": [
-        "test"
-      ]
-    },{
-      "id": "https://autumns.page/posts/2021/08/test-post-4/",
-      "url": "https://autumns.page/posts/2021/08/test-post-4/",
-      "title": "My test post 4",
-      "content_html": "",
-      "date_published": "2021-08-13T20:35:58Z",
-      "summary": "This is just a test post!",
-      "tags": [
-        "test"
-      ]
-    },{
-      "id": "https://autumns.page/posts/2021/08/test-post-3/",
-      "url": "https://autumns.page/posts/2021/08/test-post-3/",
-      "title": "My test post 3",
-      "content_html": "",
-      "date_published": "2021-08-13T20:35:51Z",
-      "summary": "This is just a test post!",
-      "tags": [
-        "test"
-      ]
-    },{
-      "id": "https://autumns.page/posts/2021/08/test-post-2/",
-      "url": "https://autumns.page/posts/2021/08/test-post-2/",
-      "title": "My test post 2",
-      "content_html": "",
-      "date_published": "2021-08-13T06:25:00Z",
       "summary": "This is just a test post!",
       "tags": [
         "test"

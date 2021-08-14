@@ -73,7 +73,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -422,6 +423,7 @@ template {
   padding: 1px 2.5px 3px 3px;
   white-space: nowrap;
   -webkit-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   font-size: 12px;
 }
