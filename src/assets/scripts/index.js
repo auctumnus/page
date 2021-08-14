@@ -15,7 +15,7 @@ const loadImage = (name) => new Promise((resolve, reject) => {
  * Tests if the current locale uses 24 hour time.
  * Thanks to stackoverflow lmao
  */
-localeUses24HourTime = () =>
+const localeUses24HourTime = () =>
   new Intl.DateTimeFormat(navigator.language, { hour: 'numeric' })
     .formatToParts(new Date(2020, 0, 1, 13))
     .find(part => part.type === 'hour').value.length === 2

@@ -1,4 +1,5 @@
 # Build results
+dist
 .cache/
 
 # Visual Studio

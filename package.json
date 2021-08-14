@@ -15,7 +15,8 @@
     "build:webpack": "webpack",
     "build:eleventy": "eleventy",
     "analyze": "npm-run-all build analyze:*",
-    "analyze:js": "source-map-explorer dist/**/*.js dist/**/*.js.map"
+    "analyze:js": "source-map-explorer dist/**/*.js dist/**/*.js.map",
+    "pages": "NODE_DEBUG=gh-pages gh-pages -d dist"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
@@ -33,6 +34,7 @@
     "css-minimizer-webpack-plugin": "^1.1.5",
     "date-fns": "^2.16.1",
     "eleventy-plugin-error-overlay": "^0.1.2",
+    "gh-pages": "^3.2.3",
     "gifsicle": "^5.2.0",
     "html-minifier": "^4.0.0",
     "js-yaml": "^3.14.1",
@@ -48,6 +50,7 @@
     "postcss-loader": "^4.1.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
+    "regenerator-runtime": "^0.13.9",
     "rimraf": "^3.0.2",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
