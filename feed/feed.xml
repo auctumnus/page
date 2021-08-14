@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>autumn&#39;s page</title>
+	<subtitle>a digital garden</subtitle>
+	
+	<link href="https://autumns.page/feed/feed.xml" rel="self"/>
+	<link href="https://autumns.page"/>
+	<updated>2021-08-14T16:41:36Z</updated>
+	<id>https://autumns.page</id>
+	<author>
+		<name>autumn</name>
+	</author>
+	
+	<entry>
+		<title>Hello world!</title>
+		<link href="https://autumns.page/posts/2021/08/hello-world/"/>
+		<updated>2021-08-14T16:34:56Z</updated>
+		<id>https://autumns.page/posts/2021/08/hello-world/</id>
+                <description>My first post and an introduction</description>
+		<content type="html">&lt;p&gt;Hello, world! This is the first post I&#39;m making on my own site, hosted on
+Neocities.&lt;/p&gt;
+&lt;p&gt;I wasn&#39;t there for the small web - not the web Berners-Lee knew, not the web
+90s kids knew, and just barely what it was in the earliest 10s - but I&#39;ve seen
+glimpses into the past, before the homogenization and centralization of the web,
+and I&#39;d much rather have a web like that than the one we have now.&lt;/p&gt;
+&lt;p&gt;There are a lot of projects trying to approximate this, and we&#39;ll probably never
+truly escape Big Tech (TM), as some might like to call it, at least until some
+sort of global revolution. Until then, I am perfectly happy to scratch out my
+own corner of the nascent indie web.&lt;/p&gt;
+&lt;p&gt;Hopefully, I&#39;ll write more than I&#39;m used to. A web without content is simply
+infrastructure, and empty Debian servers are boring.&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>My test post</title>
+		<link href="https://autumns.page/posts/2021/07/test-post/"/>
+		<updated>2021-08-14T16:34:56Z</updated>
+		<id>https://autumns.page/posts/2021/07/test-post/</id>
+                <description>This is just a test post!</description>
+		<content type="html">&lt;p&gt;This is a test post. It&#39;s got footnotes&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://autumns.page/posts/2021/07/test-post/#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;, it&#39;s got &lt;span class=&quot;unifont&quot;&gt;bracketed spans with
+attributes&lt;/span&gt;, and áll sòrŧś of &lt;span class=&quot;unifont&quot;&gt;[ˌd̥aɪ̯.ə̝.ˈkʰɹ̠ɪ.ɾɪks]&lt;/span&gt;!&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot; /&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Here&#39;s the connected information for it. &lt;a href=&quot;https://autumns.page/posts/2021/07/test-post/#fnref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+	</entry>
+</feed>
