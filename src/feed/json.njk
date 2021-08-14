@@ -1,0 +1,41 @@
+---
+permalink: "{{ metadata.jsonfeed.path }}"
+eleventyExcludeFromCollections: true
+---
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "autumn's page",
+  "language": "{{ metadata.language }}",
+  "home_page_url": "{{ metadata.url }}",
+  "feed_url": "{{ metadata.jsonfeed.url }}",
+  "description": "{{ metadata.description }}",
+  "author": {
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
+  },
+  "items": [
+    {%- for post in collections.post | reverse %}
+    {%- set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset -%}
+    {
+      "id": "{{ absolutePostUrl }}",
+      "url": "{{ absolutePostUrl }}",
+      "title": "{{ post.data.title }}",
+      "content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
+      "date_published": "{{ post.date | rssDate }}",
+      "summary": "{{ post.data.description }}",
+      "tags": [
+        {%- for tag in post.data.tags | reject("equalto", "post") %}
+        "{{tag}}"
+        {%- if not loop.last -%}
+        ,
+        {%- endif -%}
+        {%- endfor %}
+      ]
+    }
+    {%- if not loop.last -%}
+    ,
+    {%- endif -%}
+    {%- endfor %}
+  ]
+}
+

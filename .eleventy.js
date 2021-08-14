@@ -3,6 +3,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 const NavigationPlugin = require('@11ty/eleventy-navigation');
 const ErrorOverlayPlugin = require('eleventy-plugin-error-overlay');
+const RssPlugin = require('@11ty/eleventy-plugin-rss')
 
 const filters = require('./utils/filters');
 const markdown = require('./utils/markdown');
@@ -22,6 +23,8 @@ module.exports = (config) => {
   config.addPlugin(NavigationPlugin);
   // Shows error name, message, and fancy stacktrace
   config.addPlugin(ErrorOverlayPlugin);
+  // rss
+  config.addPlugin(RssPlugin)
 
   // Filters
   Object.keys(filters).forEach((key) => {
@@ -35,6 +38,8 @@ module.exports = (config) => {
 
   // Shortcodes
   config.addShortcode('icon', shortcodes.icon);
+  config.addShortcode('date', shortcodes.date)
+  config.addShortcode('unifont', shortcodes.unifont)
   config.addPairedShortcode('markdown', shortcodes.markdown);
   config.addNunjucksAsyncShortcode('image', shortcodes.image);
   config.addNunjucksAsyncShortcode('webpack', shortcodes.webpack);
@@ -54,7 +59,7 @@ module.exports = (config) => {
     callbacks: {
       ready: (err, browserSync) => {
         browserSync.addMiddleware('*', (req, res) => {
-          const fourOFour = fs.readFileSync('_site/404.html');
+          const fourOFour = fs.readFileSync('dist/404.html');
           res.writeHead(404, {"Content-Type": "text/html; charset=UTF-8"});
           res.write(fourOFour);
           res.end();
@@ -67,7 +72,13 @@ module.exports = (config) => {
   });
 
   return {
-    dir: { input: 'src', output: '_site', includes: 'includes', data: 'data' },
+    dir: {
+      input: 'src',
+      output: 'dist',
+      includes: 'includes',
+      layouts: 'layout',
+      data: 'data' 
+    },
     // Allow nunjucks, markdown and 11ty files to be processed
     templateFormats: ['njk', 'md', '11ty.js'],
     htmlTemplateEngine: 'njk',

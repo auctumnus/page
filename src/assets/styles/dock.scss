@@ -1,0 +1,23 @@
+nav#dock {
+  z-index: 99999;
+  position: absolute;
+  right: 0;
+  @media (max-width: 999px) {
+    bottom: 0;
+  }
+  @media (min-width: 1000px) {
+    top: 0;
+  }
+  > ol {
+    display: flex;
+    flex-direction: row;
+    @media (min-width: 1000px) {
+      flex-direction: column;
+    }
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+}
+
+

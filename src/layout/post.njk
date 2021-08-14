@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<article class="h-entry">
+  <h1 class="p-name">{{ title }}</h1>
+  <p class="p-summary">{{ description }}</p>
+  <hr>
+  <div class="e-content">
+    {{ content | safe }}
+  </div>
+  <hr>
+  <strong>Metadata</strong><br>
+  Written on {% date page.date %}
+  by <a class="p-author h-card" href="https://autumns.page">autumn</a>
+  <br>
+  Tags: {{ tags | reject("equalto", "post") | join(", ") }}
+</article>

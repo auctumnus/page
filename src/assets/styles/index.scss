@@ -1,45 +1,185 @@
-$blue: darkslateblue;
-$bg-body: antiquewhite;
+@use 'reset.css';
+@use 'scrollbar.scss';
+@use 'colors.scss';
+@use 'window.scss';
+@use 'dock.scss';
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  font-family: 'Courier New', Courier, monospace;
+.hide {
+  display: none;
 }
 
-// A general comment that should be
-// stripped out in production
-body {
-  color: $blue;
-  background-color: $bg-body;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-main {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-
+.wide {
   img {
-    width: 6rem;
+    max-width: 100% !important;
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  > img {
+    margin: 3px;
+  }
 }
 
-.icon {
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  margin-right: 0.25em;
-  vertical-align: middle;
-  font-size: 1.5em;
-  fill: currentColor;
-  pointer-events: none;
+.ēmail {
+  position: relative;
+  top: 3px;
+}
+
+#main-window {
+  height: calc(100% - 2px);
+}
+.window-content {
+  box-sizing: border-box;
+  overflow: auto;
+  height: 100%;
+  width: calc(100vw - 14px);
+  > * {
+    max-width: 85ch;
+    margin-right: auto;
+    text-align: left;
+  }
+  > *:last-child {
+    margin-bottom: 10rem;
+  }
+
+  img {
+    max-width: calc(100vw - 14px - 9ch);
+    height: auto;
+  }
+}
+@media (min-width: 1000px) {
+  #main-window {
+    margin-top: 3rem;
+    margin-left: 15rem;
+    width: 85ch;
+    height: 75vh;
+  }
+  .window-content {
+    width: 100%;
+    height: calc(100% - 30px);
+    > *:last-child {
+      margin-bottom: 10px;
+    }
+    img {
+      max-width: calc(76ch)
+    }
+  }
+}
+
+html {
+  height: 100vh;
+}
+body {
+  height: 100%;
+  image-rendering: -moz-crisp-edges;
+  font-family: 'Nextstep', 'MS Mincho', 'Hiragino Mincho ProN W3', 'HiraMinProN-W3', 
+               Georgia, 'Times New Roman', Times, serif;
+  background-color: colors.$background;
+  font-size: 9px;
+  cursor: url('../static/cursor.png'), default;
+}
+button {
+  cursor: url('../static/cursor.png'), default;
+}
+
+a, canvas {
+  cursor: url('../static/pointer.png'), pointer;
+}
+
+h1 {
+  font-family: 'Nextstep', 'MS Mincho', 'Hiragino Mincho ProN W3', 'HiraMinProN-W3', 
+               Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 1px;
+}
+
+.p-summary {
+  color: #777;
+}
+
+strong {
+  font-size: 12px;
+}
+
+@font-face {
+  font-family: "Unifont";
+  src: url("../static/unifont-13.0.06.woff2") format("woff2"),
+       url("../static/unifont-13.0.06.woff")  format("woff");
+}
+@font-face {
+  font-family: "Nextstep";
+  src: url("../static/nextstep-bold.woff") format("woff");
+  src: url("../static/nextstep-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nextstep";
+  src: url("../static/nextstep.woff2") format("woff2"),
+    url("../static/nextstep.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nextstep Heading";
+  src: url("../static/nextstep-heading.woff2") format("woff2"),
+    url("../static/nextstep-heading.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unifont";
+  src: url("../static/unifont-13.0.06.woff2") format("woff2"),
+  url("../static/unifont-13.0.06.woff") format("woff");
+}
+
+.unifont {
+  font-family: 'Unifont', monospace;
+  font-size: 16px;
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+button:focus:not(:-moz-focusring) {
+  outline: none;
 }

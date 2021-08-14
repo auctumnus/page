@@ -24,7 +24,7 @@ module.exports = {
   ],
   output: {
     filename: isDev ? '[name].js' : '[name].[contenthash].js',
-    path: path.resolve(__dirname, '_site/assets'),
+    path: path.resolve(__dirname, 'dist/assets'),
     publicPath: '/assets/'
   },
   plugins: [

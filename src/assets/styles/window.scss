@@ -1,0 +1,118 @@
+@use 'colors.scss';
+
+.window-wrapper {
+  background-color: colors.$surface;
+  border: 1px solid black;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 2px 1px 1px rgba(0,0,0,0.2);
+}
+
+.window-title-bar-wrapper {
+  display: flex;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.window-title-bar-wrapper > *:not(:last-child) {
+  border-right: 1px solid black;
+}
+.window-title-bar-button:last-child {
+  width: 21px;
+}
+
+.window-title-bar {
+  box-sizing: border-box;
+  font-weight: bold;
+  flex: 1;
+  box-shadow: colors.$border-raised-outer,
+              colors.$border-raised-inner;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  padding: 1px 2.5px 3px 3px;
+  white-space: nowrap;
+  user-select: none;
+  font-size: 12px;
+}
+
+@supports (-moz-appearance:meterbar) {
+  .window-title-bar {
+    padding: 2px 5.5px 3px 3px;
+  }
+}
+
+.window-title-bar-button {
+  box-shadow: colors.$border-raised-outer, colors.$border-raised-inner;
+  height: 22px;
+  width: 22px;
+}
+
+.window-title-bar-button img {
+  position: relative;
+  top: -1px;
+}
+
+
+.window-title-bar-button:active {
+  box-shadow: colors.$border-raised-outer, colors.$border-raised-inner;
+}
+
+.window-content {
+  direction: rtl;
+  overflow: auto;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+  line-height: 1.8;
+  > * {
+    direction: ltr;
+  }
+  > sub, sup {
+    font-size: 100%;
+  }
+}
+
+ul {
+  list-style: url('../static/dot.png');
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid black;
+}
+
+
+.window-resize-bar {
+  z-index: 99;
+  display: flex;
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.window-resize-bar div {
+  background-color: colors.$surface;
+  box-shadow: inset 1px 1px colors.$button-highlight,
+              inset -1px -1px colors.$button-shadow,
+              inset 1px 1px colors.$surface;
+}
+
+.window-resize-sw {
+  width: 28px;
+  cursor: sw-resize;
+}
+
+.window-resize-s {
+  flex: 1;
+  cursor: s-resize;
+}
+
+.window-resize-se {
+  width: 28px;
+  cursor: se-resize;
+}

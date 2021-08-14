@@ -1,0 +1,59 @@
+@use 'colors.scss';
+
+::-webkit-scrollbar {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  width: 22px;
+  background-color: colors.$surface;
+}
+
+::-webkit-scrollbar-track:vertical {
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 22px;
+}
+
+::-webkit-scrollbar-corner {
+  background: colors.$surface;
+}
+
+::-webkit-scrollbar-track {
+  width: 22px;
+  border-right: 1px solid black;
+  background: url("../static/scrollbar-background.svg"), colors.$surface;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 22px;
+  background-color: colors.$surface;
+  box-shadow: inset -1px 0px black, inset 2px 0px colors.$surface,
+    inset -2px 0px colors.$surface,inset -3px -1px black, inset 3px 1px white, 
+    inset -4px -2px colors.$button-shadow;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment {
+  display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  height: 21px;
+  background: 1px 1px no-repeat url("../static/button-up.svg"), colors.$surface;
+  box-shadow: inset -1px 0px black;
+}
+::-webkit-scrollbar-button:vertical:end {
+  height: 21px;
+  background: 1px 1px no-repeat url("../static/button-down.svg"), colors.$surface;
+  box-shadow: inset -1px 0px black;
+}
+::-webkit-scrollbar-button:horizontal:start {
+  width: 22px;
+  background-image: url("../static/button-left.svg");
+}
+::-webkit-scrollbar-button:horizontal:end {
+  width: 22px;
+  background-image: url("../static/button-right.svg");
+}

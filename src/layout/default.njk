@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}" lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <link type="text/plain" rel="author" href="/humans.txt" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    {# preload fonts #}
+    <link rel="preload" href="/assets/static/nextstep.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="/assets/static/nextstep-bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="/assets/static/nextstep.woff" as="font" type="font/woff">
+    <link rel="preload" href="/assets/static/nextstep-bold.woff" as="font" type="font/woff">
+
+    <title>
+      {% if title %}{{ title }} · {{ metadata.title }}{% else %}{{ metadata.title }}{% endif %}
+    </title>
+    <meta name="description" content="{{description or metadata.description}}">
+
+    {# opengraph (don't call me a poser, it's for cute embeds) #}
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="{{ metadata.url }}">
+    <meta name="og:title" content="{{title or metadata.title}}">
+    <meta name="og:description" content="{{description or metadata.description}}">
+
+    {# twitter, why not #}
+    <meta name="twitter:url" content="{{ metadata.url }}">
+    <meta name="twitter:title" content="{{title or metadata.title}}">
+    <meta name="twitter:description" content="{{description or metadata.description}}">
+
+    {# feed discovery #}
+    <link rel="alternate" type="application/rss+xml" title="RSS"
+      href="/feed/feed.xml">
+    <link rel="alternate" type="application/json" title="JSON Feed"
+      href="/feed/feed.json">
+
+    {# js n css #}
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.101.0"></script>
+    <script defer src="{% webpack 'main.js' %}"></script>
+    <link rel="stylesheet" href="{% webpack 'main.css' %}">
+  </head>
+  <body class="{{ bodyClass }}">
+    {# main window #}
+    <div class="window-wrapper" id="main-window">
+      {# title bar #}
+      <div aria-hidden class="window-title-bar-wrapper">
+        <button class="window-title-bar-button" onclick="() => {}">
+          <img src="/assets/static/maximize.svg">
+        </button>
+        <div class="window-title-bar">
+          {{ title or metadata.title }}
+        </div>
+        <button class="window-title-bar-button" onclick="() => {}">
+          <img src="/assets/static/close.svg">
+        </button>
+      </div>
+      {# main content #}
+      <main class="window-content">
+        {{ content | safe }}
+      </main>
+      {# resize bar #}
+      <div aria-hidden class="window-resize-bar">
+        <div class="window-resize-sw"></div>
+        <div class="window-resize-s"></div>
+        <div class="window-resize-se"></div>
+      </div>
+    </div>
+    <nav id="dock" aria-label="Navigation">
+      <ol role="list">
+        <li>
+          <a href="/" title="Home">
+            <img width="64" height="64" src="/assets/static/applogos/next.png" alt="Home">
+          </a>
+        </li>
+        <li>
+          <canvas id="clock_canvas" width="64" height="64">
+            <img width="64" height="64" src="/assets/static/applogos/clock_fallback.png" alt="Clock">
+          </canvas>
+        </li>
+        <li>
+          <a href="/contact.html" title="Contact">
+            <img width="64" height="64" src="/assets/static/applogos/mail.png" alt="Contact">
+          </a>
+        </li>
+        <li>
+          <a href="/archive.html" title="Archive">
+            <img width="64" height="64" src="/assets/static/applogos/library.png" alt="Archive">
+          </a>
+        </li>
+        <li>
+          <a href="/colophon.html" title="Colophon">
+            <img width="64" height="64" src="/assets/static/applogos/gear.png" alt="Colophon">
+          </a>
+        </li>
+        <li>
+          <a href="/todo.html">
+            <img width="64" height="64" src="/assets/static/applogos/todo.png" alt="To do list">
+          </a>
+        </li>
+      </ol>
+    </nav>
+    {#<footer>
+      <p><a href="{{ site.url }}">{% icon "github" %}eleventy-webpack</a> - <time datetime="{{ build.timestamp | formatISO }}">{{ build.timestamp | format("dd LLL yyyy") }}</time></p>
+    </footer>#}
+  </body>
+</html>

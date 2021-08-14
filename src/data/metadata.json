@@ -1,0 +1,20 @@
+{
+  "title": "autumn's page",
+  "url": "https://autumns.page",
+  "description": "a digital garden",
+  "language": "en",
+  "feed": {
+    "subtitle": "a digital garden",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://autumns.page"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://autumns.page/feed/feed.json"
+  },
+  "author": {
+    "name": "autumn",
+    "url": "https://autumns.page/contact.html"
+  }
+}

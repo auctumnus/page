@@ -1,0 +1,10 @@
+$background: #505170;
+$surface: #a0a0a0;
+$button-shadow: #505050;
+$button-highlight: #fbfdff;
+$window-frame: #0a0a0a;
+
+$border-raised-outer: inset 0px -1px $window-frame,
+                      inset 1px 1px $button-highlight;
+$border-raised-inner: inset -1px -2px $button-shadow,
+                      inset 1px 1px $surface;
