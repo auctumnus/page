@@ -16,7 +16,8 @@
     "build:eleventy": "eleventy",
     "analyze": "npm-run-all build analyze:*",
     "analyze:js": "source-map-explorer dist/**/*.js dist/**/*.js.map",
-    "pages": "NODE_DEBUG=gh-pages gh-pages -d dist"
+    "pages": "NODE_DEBUG=gh-pages gh-pages -d dist -a -m 'update site'",
+    "deploy": "pnpm run build && pnpm run pages"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",

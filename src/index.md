@@ -35,6 +35,14 @@ or see:
 ![Play Touhou today!](assets/static/88x31/2hu.gif)
 {.center}
 
+<div id="yesterweb" class="center">
+  <span>This site is part of the Yesterweb Webring.</span>
+  <span class="yesterweb-links">
+    <a href="https://rocktype.neocities.org/">Previous</a>
+    <a href="https://tabi98.neocities.org/">Next</a>
+  </span>
+</div>
+
 [archive]: /archive.html
 [legal]: /legal.html
 [todo]: /todo.html

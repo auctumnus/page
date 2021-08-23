@@ -12,7 +12,8 @@ eleventyExcludeFromCollections: true
 
 This site is written on Manjaro Linux on a Thinkpad T440p using Neovim from wherever
 I'm living, in Markdown, SCSS, Javascript, Nunjucks, et cetera, and then fed through
-Eleventy to produce the actual HTML.
+Eleventy to produce the actual HTML. You can see the actual code [on github][gh] -
+the actual deployed files are under the "gh-pages" branch.
 
 {% image "desktop.png", "Desktop screenshot", "A screenshot of the dev process - you'll have to open it in a new tab to see it at a decent size" %}
 
@@ -41,3 +42,4 @@ your viewing pleasure. (They should be auto-discoverable, either way.)
 [rss]: /feed/feed.xml
 [jsonfeed]: /feed/feed.json
 [servo]: https://servo.org
+[gh]: https://github.com/auctumnus/page

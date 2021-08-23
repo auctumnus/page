@@ -152,7 +152,8 @@ let drawArbitrary = () => {}
   const draw24Hour = (hour, minute) => {
     const hourTens = Math.floor(hour / 10)
     const hourOnes = hour % 10
-    if(hourTens || fullHour) {
+    const offset = hourTens ? 0 : -3
+    if(hourTens) {
       ctx.drawImage(
         led,
         9 * hourTens, 0, 9, 11,
@@ -164,8 +165,8 @@ let drawArbitrary = () => {}
       9 * hourOnes, 0, 9, 11,
       19 + offset, 6, 9, 11
     )
-    drawSep()
-    drawMinutes(minute)
+    drawSep(offset)
+    drawMinutes(minute, offset)
   }
 
   const updateClock = (now) => {
@@ -195,3 +196,82 @@ let drawArbitrary = () => {}
   global.drawArbitrary = updateClock
   setInterval(updateClock, 1000 * 60)
 })()
+
+/**
+ *  =============== Yesterweb code ===============
+ */
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+const h = (tag, content, clasz, children) => {
+  const el = document.createElement(tag)
+  el.innerText = content
+  if(clasz) el.classList.add(clasz)
+  children?.forEach(child => el.appendChild(child))
+  return el
+}
+
+const a = (content, href) => {
+  const link = h('a', content)
+  link.href = href
+  return link
+}
+
+const bannerText = h('span', 'This site is part of the Yesterweb Webring.')
+
+const yesterweb = document.getElementById('yesterweb')
+
+const getList = () => fetch('https://yesterwebring.neocities.org/webring.json')
+  .then(r => r.json())
+
+const getMyIndex = list => {
+  let index = -1
+  list.forEach((w, i) => w.url.includes('autumns.page') ? index = i : undefined)
+  return index
+}
+
+const renderYesterweb = async () => {
+  const list = await getList()
+
+  if(!Array.isArray(list)) {
+    console.error('yesterweb json changed to be weird, someone yell at autumn')
+    console.log(list)
+    return undefined
+  }
+
+  const myIndex = getMyIndex(list)
+  if(myIndex === -1) {
+    console.error('im not on the webring apparently')
+    return undefined
+  } else if(myIndex - 1 > list.length) {
+    console.error('i fucked up the list length')
+    return undefined
+  }
+  const nextIndex = myIndex + 1
+  const randomIndex = getRandomInt(list.length - 1)
+  const previousIndex = myIndex - 1
+
+  const nextHref = list[nextIndex].url
+  const randomHref = list[randomIndex].url
+  const previousHref = list[previousIndex].url
+
+  const nextLink = a('Next', nextHref)
+  const randomLink = a('Random', randomHref)
+  const previousLink = a('Previous', previousHref)
+
+  const links = h('span', '', 'yesterweb-links', [
+    previousLink, randomLink, nextLink
+  ])
+
+  links.style['margin-left'] = '0.5px'
+
+  yesterweb.innerHTML = ''
+  yesterweb.appendChild(bannerText)
+  yesterweb.appendChild(links)
+}
+
+if(yesterweb) {
+  renderYesterweb()
+}

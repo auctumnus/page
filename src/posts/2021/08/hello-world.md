@@ -3,6 +3,7 @@ tags: ['post', 'introduction']
 layout: post
 title: Hello world!
 description: My first post and an introduction
+date: '2021-08-14T00:34-05:00'
 ---
 
 Hello, world! This is the first post I'm making on my own site, hosted on

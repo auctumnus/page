@@ -30,6 +30,25 @@
   top: 3px;
 }
 
+#yesterweb {
+  display: flex;
+  flex-direction: column;
+}
+
+#yesterweb > span:nth-child(1) {
+  margin-left: 0.5px;
+}
+
+.yesterweb-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  > a {
+    display: inline-flex;
+    margin-left: 3px;
+  }
+}
+
 #main-window {
   height: calc(100% - 2px);
 }
