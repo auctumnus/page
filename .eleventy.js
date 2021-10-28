@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const NavigationPlugin = require('@11ty/eleventy-navigation');
 const ErrorOverlayPlugin = require('eleventy-plugin-error-overlay');
 const RssPlugin = require('@11ty/eleventy-plugin-rss')
@@ -25,6 +26,8 @@ module.exports = (config) => {
   config.addPlugin(ErrorOverlayPlugin);
   // rss
   config.addPlugin(RssPlugin)
+  // syntax highlighting
+  config.addPlugin(syntaxHighlight)
 
   // Filters
   Object.keys(filters).forEach((key) => {

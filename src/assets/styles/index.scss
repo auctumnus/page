@@ -3,6 +3,7 @@
 @use 'colors.scss';
 @use 'window.scss';
 @use 'dock.scss';
+@use 'syntax.scss';
 
 .hide {
   display: none;
@@ -159,6 +160,17 @@ strong {
   font-family: "Unifont";
   src: url("../static/unifont-13.0.06.woff2") format("woff2"),
   url("../static/unifont-13.0.06.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Fixed Medium";
+  src: url("../static/fixed-medium.woff2") format("woff2"),
+  url("../static/fixed-medium.woff") format("woff");
+}
+
+pre, code {
+  font-family: "Fixed Medium";
+  font-size: 11px;
 }
 
 .unifont {

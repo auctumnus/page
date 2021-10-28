@@ -1,9 +1,9 @@
 ---
 tags: ['post', 'programming', 'tech']
 layout: post
-title: Programming languages
-description: ... or, my friction with many of them
-eleventyExcludeFromCollections: true
+title: The Importance of `import`s
+description: ... or, include considered harmful
+date: '2021-09-08T21:43:30-0500'
 ---
 
 I do a lot of web development. Out of all my projects that I care about,
@@ -90,33 +90,40 @@ jump to definition. But I shouldn't have to! If I open a big C project in nano,
 I have to search around externally, grepping for symbols and such to figure out
 where things come from or how the program flows. If I open a big Javascript or
 Typescript project in nano, I can get a much clearer picture of program flow
-and where functions are declared. Simple imports make things a lot better.
+and where functions are declared.
 
-I've also looked at Rust, which I do very much want to spend more time in,
-based on testimonials of how nice it is, and it has similar problems but
-not nearly as bad. Rust's imports are much cleaner, and I like them a lot more
-than C(++)'s, but they still suffer from it being hard to tell where
-symbols are coming from to an extent. In the most ideal case, imports are clear:
+One good piece of news in this space is that C++20 is introducing modules, which
+looks **really** similar to Typescript:
 
-```rs
-mod bar;
+```cpp
+// in foo.cc
+export module Foo;
+namespace Bar {
+  export int f() {
+    return 42;
+  }
+}
 
-fn main() {
-  println!("{}", bar::foo(3));
+// in main.cc
+import Foo;
+import std.core;
+
+using namespace std;
+
+int main() {
+  cout << Bar::f() << endl;
 }
 ```
 
-Here, I know I have to go look for a file named `bar.rs`. However, code is
-rarely in the most ideal, readable form; wildcard imports are the most common
-culprit:
+This still suffers from the issue of "I have no clue what's now in scope", but
+it gets rid of header files, which are the much worse part of the problem.
+Additionally, modules seem... very unsupported. I looked at [GCC's page on the topic][gcc],
+and the state looks very unfinished so far.
 
-```rs
-mod bar;
-
-usr bar::*;
-
-
-```
+I'd get more grumpy about random parts of programming languages that I don't like,
+but this post would be a mile long and I wouldn't have finished it. So, in summary:
+stop making languages with bare imports, take a page from ES6's book (but not too
+many, JS is still a bit of a nightmare), and overthrow C(++).
 
 [^1]:
     Not that Javscript is really that different, but there is at least some
@@ -130,3 +137,6 @@ usr bar::*;
     This should not be a consideration - if I open a big C project in nano,
     I have to search around externally to figure out what's going on. If I open a
     big JS/TS project in nano, I can generally get an idea of how the project works.
+
+[gcc]: https://gcc.gnu.org/wiki/cxx-modules
+[sus]: https://serenityos.org

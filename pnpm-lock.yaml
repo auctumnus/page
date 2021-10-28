@@ -5,6 +5,7 @@ specifiers:
   '@11ty/eleventy-img': ^0.9.0
   '@11ty/eleventy-navigation': ^0.1.6
   '@11ty/eleventy-plugin-rss': ^1.1.1
+  '@11ty/eleventy-plugin-syntaxhighlight': ^3.1.2
   '@babel/cli': ^7.12.10
   '@babel/core': ^7.12.10
   '@babel/preset-env': ^7.12.10
@@ -52,6 +53,7 @@ devDependencies:
   '@11ty/eleventy': 0.11.1
   '@11ty/eleventy-navigation': 0.1.6_@11ty+eleventy@0.11.1
   '@11ty/eleventy-plugin-rss': 1.1.1_@11ty+eleventy@0.11.1
+  '@11ty/eleventy-plugin-syntaxhighlight': 3.1.2_@11ty+eleventy@0.11.1
   '@babel/cli': 7.14.8_@babel+core@7.14.8
   '@babel/core': 7.14.8
   '@babel/preset-env': 7.14.8_@babel+core@7.14.8
@@ -145,6 +147,16 @@ packages:
       posthtml-urls: 1.0.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@11ty/eleventy-plugin-syntaxhighlight/3.1.2_@11ty+eleventy@0.11.1:
+    resolution: {integrity: sha512-OdUNqRMV2rvNljHgL6MW4hA+jBpdEbuSKOWYNKgD8OwlsDwwzooRNyDAF5u4sXQ0knjenDeWOH6fuCiLharAWA==}
+    peerDependencies:
+      '@11ty/eleventy': '>=0.5.4'
+    dependencies:
+      '@11ty/eleventy': 0.11.1
+      linkedom: 0.11.2
+      prismjs: 1.24.1
     dev: true
 
   /@11ty/eleventy/0.11.1:
@@ -1432,6 +1444,10 @@ packages:
 
   /@types/q/1.5.5:
     resolution: {integrity: sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==}
+    dev: true
+
+  /@ungap/event-target/0.2.3:
+    resolution: {integrity: sha512-7Bz0qdvxNGV9n0f+xcMKU7wsEfK6PNzo8IdAcOiBgMNyCuU0Mk9dv0Hbd/Kgr+MFFfn4xLHFbuOt820egT5qEA==}
     dev: true
 
   /@webassemblyjs/ast/1.11.1:
@@ -3029,8 +3045,8 @@ packages:
     dependencies:
       boolbase: 1.0.0
       css-what: 5.0.1
-      domhandler: 4.2.0
-      domutils: 2.7.0
+      domhandler: 4.2.2
+      domutils: 2.8.0
       nth-check: 2.0.0
     dev: true
 
@@ -3162,6 +3178,10 @@ packages:
 
   /cssom/0.3.8:
     resolution: {integrity: sha512-b0tGHbfegbhPJpxpiBPU2sCkigAqtM9O121le6bbOlgyV+NyGyCmVfJ6QW9eRjz8CpNfWEOYBIMIGRYkLwsIYg==}
+    dev: true
+
+  /cssom/0.5.0:
+    resolution: {integrity: sha512-iKuQcq+NdHqlAcwUY0o/HL69XQrUaQdMjmStJ8JFmUaiiQErlhrmuigkg/CU4E2J0IyUKUrMAgl36TvN67MqTw==}
     dev: true
 
   /currently-unhandled/0.4.1:
@@ -3432,7 +3452,7 @@ packages:
     resolution: {integrity: sha512-5c54Bk5Dw4qAxNOI1pFEizPSjVsx5+bpJKmL2kPn8JhBUq2q09tTCa3mjijun2NfK78NMouDYNMBkOrPZiS+ig==}
     dependencies:
       domelementtype: 2.2.0
-      domhandler: 4.2.0
+      domhandler: 4.2.2
       entities: 2.2.0
     dev: true
 
@@ -3451,6 +3471,13 @@ packages:
       domelementtype: 2.2.0
     dev: true
 
+  /domhandler/4.2.2:
+    resolution: {integrity: sha512-PzE9aBMsdZO8TK4BnuJwH0QT41wgMbRzuZrHUcpYncEjmQazq8QEaBWgLG7ZyC/DAZKEgglpIA6j4Qn/HmxS3w==}
+    engines: {node: '>= 4'}
+    dependencies:
+      domelementtype: 2.2.0
+    dev: true
+
   /domutils/1.7.0:
     resolution: {integrity: sha512-Lgd2XcJ/NjEw+7tFvfKxOzCYKZsdct5lczQ2ZaQY8Djz7pfAD3Gbp8ySJWtreII/vDlMVmxwa6pHmdxIYgttDg==}
     dependencies:
@@ -3464,6 +3491,14 @@ packages:
       dom-serializer: 1.3.2
       domelementtype: 2.2.0
       domhandler: 4.2.0
+    dev: true
+
+  /domutils/2.8.0:
+    resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
+    dependencies:
+      dom-serializer: 1.3.2
+      domelementtype: 2.2.0
+      domhandler: 4.2.2
     dev: true
 
   /dot-prop/5.3.0:
@@ -4646,6 +4681,10 @@ packages:
     resolution: {integrity: sha1-wc56MWjIxmFAM6S194d/OyJfnDg=}
     dev: true
 
+  /html-escaper/3.0.3:
+    resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
+    dev: true
+
   /html-minifier/4.0.0:
     resolution: {integrity: sha512-aoGxanpFPLg7MkIl/DDFYtb0iWz7jMFGqFhvEDZga6/4QTjneiD8I/NXL1x5aaoCp7FSIT6h/OhykDdPsbtMig==}
     engines: {node: '>=6'}
@@ -4664,8 +4703,8 @@ packages:
     resolution: {integrity: sha512-gyyPk6rgonLFEDGoeRgQNaEUvdJ4ktTmmUh/h2t7s+M8oPpIPxgNACWa+6ESR57kXstwqPiCut0V8NRpcwgU7A==}
     dependencies:
       domelementtype: 2.2.0
-      domhandler: 4.2.0
-      domutils: 2.7.0
+      domhandler: 4.2.2
+      domutils: 2.8.0
       entities: 2.2.0
     dev: true
 
@@ -5490,6 +5529,17 @@ packages:
 
   /lines-and-columns/1.1.6:
     resolution: {integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=}
+    dev: true
+
+  /linkedom/0.11.2:
+    resolution: {integrity: sha512-cqxU5owJnJlSiGKkJ1a1umGEqNWvTLABkZ672EFwMEeRF1HeZ7yC8NbTI846FesfwYI3Qou2IfnBh/Wk1mrKmQ==}
+    dependencies:
+      '@ungap/event-target': 0.2.3
+      css-select: 4.1.3
+      cssom: 0.5.0
+      html-escaper: 3.0.3
+      htmlparser2: 6.1.0
+      uhyphen: 0.1.0
     dev: true
 
   /linkify-it/2.2.0:
@@ -7710,6 +7760,10 @@ packages:
     resolution: {integrity: sha512-U5Noa+FYV1dGkICyLJz8IWlDUehPF4Bk9tZRO8YqPhLA9EoiHuFqtnpWY2mvMjHh5eOLo82HipeLn4RIiSsGqQ==}
     dev: true
 
+  /prismjs/1.24.1:
+    resolution: {integrity: sha512-mNPsedLuk90RVJioIky8ANZEwYm5w9LcvCXrxHlwf4fNVSn8jEipMybMkWUyyF0JhnC+C4VcOVSBuHRKs1L5Ow==}
+    dev: true
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
@@ -9424,6 +9478,10 @@ packages:
     resolution: {integrity: sha1-bgkk1r2mta/jSeOabWMoUKD4grc=}
     dev: true
     optional: true
+
+  /uhyphen/0.1.0:
+    resolution: {integrity: sha512-o0QVGuFg24FK765Qdd5kk0zU/U4dEsCtN/GSiwNI9i8xsSVtjIAOdTaVhLwZ1nrbWxFVMxNDDl+9fednsOMsBw==}
+    dev: true
 
   /unbox-primitive/1.0.1:
     resolution: {integrity: sha512-tZU/3NqK3dA5gpE1KtyiJUrEB0lxnGkMFHptJ7q6ewdZ8s12QrODwNbhIJStmJkd1QDXa1NRA8aF2A1zk/Ypyw==}
