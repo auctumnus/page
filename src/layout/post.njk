@@ -14,5 +14,5 @@ layout: default
   Written on {% date page.date %}
   by <a class="p-author h-card" href="https://autumns.page">autumn</a>
   <br>
-  Tags: {{ tags | reject("equalto", "post") | join(", ") }}
+  {{ tags | taggify }}
 </article>

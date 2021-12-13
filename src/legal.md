@@ -30,7 +30,7 @@ the ui of this site gets a little more complicated:
 this doesn't help me legally nor is it meant to, this is just a genuine sidebar
 to shout out these cool things)
 
-in addition, as of the third of august, 2021, i have not yet received
+in addition, as of the thirteenth of december, 2021, i have not yet received
 any warrants, secret court orders, or gag orders. timely publication of any canary
 should not be expected (... which certainly weakens the canary, but hopefully
 does not kill it outright)

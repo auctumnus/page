@@ -1,6 +1,6 @@
 hi im autumn
 
-last updated (might be outdated relative to the site): 2021-08-04 12:17 am cst
+last updated (might be outdated relative to the site): 2021-12-13 10:25 am cst
 ide: neovim, gimp; manjaro linux
 language: english, html, (s)css, js
 you can find my contact info at /contact.html !

@@ -6,6 +6,11 @@ description: autumn's digital garden
 
 welcome to my site! please excuse the construction
 
+i'm best viewed on a monitor/browser that doesn't make the text all glowy!
+
+to get around, you can click on one of the dockapps listed either to the right
+or on the bottom, depending on your screen's size
+
 check out my most recent posts:
 
 <ul>
@@ -20,6 +25,7 @@ or see:
 
 - [all the posts i've made][archive]
 - [ways to contact me][contact]
+- [some stuff i like][recommendations]
 - [what i should be doing][todo]
 - [licenses and other legal stuff][legal]
 
@@ -43,6 +49,7 @@ or see:
   </span>
 </div>
 
+[recommendations]: /recommendations.html
 [archive]: /archive.html
 [legal]: /legal.html
 [todo]: /todo.html

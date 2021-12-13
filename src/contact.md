@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 permalink: contact.html
 title: Contact
 description: send me messages, explicit or implicit
 eleventyExcludeFromCollections: true
+date: '2021-08-14T00:34-05:00'
 ---
 
 hello, thank you for wanting to contact me! :-)
