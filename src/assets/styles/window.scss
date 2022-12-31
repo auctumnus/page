@@ -58,7 +58,11 @@
 
 
 .window-title-bar-button:active {
-  box-shadow: colors.$border-raised-outer, colors.$border-raised-inner;
+  box-shadow: inset 0px -1px colors.$window-frame,
+              inset 1px 1px colors.$button-shadow,
+              inset -1px -2px colors.$button-highlight,
+              inset 1px 1px colors.$surface;
+
 }
 
 .window-content {

@@ -10,14 +10,20 @@ date: '2021-12-13T09:39-05:00'
 if you should enjoy the content on my site, here's a list of things i enjoy; you
 might enjoy them as well
 
+## greetz
+
+my online oomfs can be found at
+ - <https://mikufan.page>
+ - <https://kholo.moe>
+ - <https://acm.umn.edu>
+
 ## internet
 
  - [philosopher.life](https://philosopher.life) - warning, long page load; a
    log of life of a person with an interesting writing style (meant positively!)
    and a lot of content
- - [systemspace](https://systemspace.network) (warning, autoplaying music!) was 
-   an experience that i certainly have not forgot. (if you're a former migrant,
-   come say hi!)
+ - systemspace[^1] was an experience that i certainly have not forgot. (if
+   you're a former migrant, come say hi!)
  - [corru.network](https://corru.network/). if you enjoy
    [fauux](https://fauux.neocities.org) (epilepsy/sound warning),
    [angusnicneven](https://angusnicneven.com), or systemspace, you'll enjoy this
@@ -62,3 +68,6 @@ you a link to watch them through
 unfortunately, i am a child of the screen, and books fell out of my grasp with
 that, but i can strongly recommend
 [house of leaves](https://en.wikipedia.org/wiki/House_of_Leaves)
+
+[^1]: this link doesn't work anymore :-( an archive used to be available at
+systemspace.network

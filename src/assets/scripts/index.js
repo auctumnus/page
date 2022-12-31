@@ -194,7 +194,7 @@ let drawArbitrary = () => {}
 
   updateClock(new Date())
   global.drawArbitrary = updateClock
-  setInterval(updateClock, 1000 * 60)
+  setInterval(updateClock, 1000)
 })()
 
 /**

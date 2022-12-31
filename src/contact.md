@@ -23,6 +23,7 @@ to least:
   local instance?)
 - i can be found among projects of varying levels of completion as [auctumnus][gh]
   on github (i should run my own instance of git or use sr.ht, but ci is useful)
+- i'm on the [fourth website][cohost]
 - if you absolutely must, i can be reached through mail at
   [{% image "asdfghjkl.png", "my email address - excuse the inaccessibility, but bots are horrible!" %}]{.ēmail}
   and though i cannot promise i'll remember to actually use pgp, my public key
@@ -36,3 +37,4 @@ if you should otherwise see someone named "auctumnus" or another variation on
 [pubkey]: https://keybase.io/auctumnus
 [tsuitta]: https://twitter.com/syysilma
 [gh]: https://github.com/auctumnus
+[cohost]: https://cohost.org/auctumnus
