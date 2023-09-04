@@ -69,6 +69,18 @@ const getYearCycle = (year) => {
 
 const daysInMonth = (month, year) => {
     if (month === 9) { // Bomaigh
+        if(year === 2677) {
+            return 17
+        }
+        // pre 2677
+        if(year < 2677) {
+            if(year % 3 === 0) {
+                return 29
+            } else {
+                return 30
+            }
+        }
+        // after 2677
         if (year % 600 === 0) {
             return 28
         } else if ((year % 3 === 0) || (year % 200 === 0)) {
@@ -137,6 +149,12 @@ const makeMonth = (month, year, includeHeader) => {
         if(currentDay > length) break
         thirdWeek.appendChild(h('td', {}, currentDay + ''))
         currentDay += 1
+    }
+
+    if(currentDay > length && thirdWeek.children.length < 10) {
+        for(let i = thirdWeek.children.length; i < 10; i++) {
+            thirdWeek.appendChild(h('td', {}, ''))
+        }
     }
 
     table.appendChild(firstWeek)
