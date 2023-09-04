@@ -21,7 +21,7 @@ module.exports = {
   entry: [
     path.resolve(__dirname, 'src/assets/scripts/index.js'),
     path.resolve(__dirname, 'src/assets/styles/index.scss')
-  ],
+  },
   output: {
     filename: isDev ? '[name].js' : '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist/assets'),
