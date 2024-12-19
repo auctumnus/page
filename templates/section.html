@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{ section.title }} | autumn's page</title>
+<link rel="stylesheet" href="/page.css">
+{% endblock head %}
+
+{% block content %}
+<h1>{{ section.title }}</h1>
+
+{{ section.content | safe }}
+
+<ul>
+    <!-- If you are using pagination, section.pages will be empty.
+         You need to use the paginator object -->  
+    {% for page in section.pages %}
+    <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

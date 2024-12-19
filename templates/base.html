@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="prefetch" href="/fonts/Source_Serif_4-latin.woff2">
+        <link rel="prefetch" href="/fonts/Crimson_Pro-latin.woff2">
+        <link rel="stylesheet" href="/fonts.css">
+        <link rel="stylesheet" href="/base.css">
+        <link rel="icon" href="/2clovers.webp">
+        <script src="/main.js" defer></script>
+        {% block head %}{% endblock %}
+        <noscript>
+            <style>
+                .js-only { display: none; }
+            </style>
+        </noscript>
+    </head>
+    <body>
+        <nav>
+            <img src="/autumn.png" class="autumn" alt="autumn">
+            <h1>autumn</h1>
+            <h2>pages</h2>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="https://garden.autumns.page">garden</a></li>
+                <li><a href="/projects">projects</a></li>
+                <li><a href="/posts">posts</a></li>
+                <li><a href="/links">links</a></li>
+            </ul>
+            <h2>about</h2>
+            <ul>
+                <li><a href="/about">about</a></li>
+                <li><a href="/contact">contact</a></li>
+                <li><a href="/now">now</a></li>
+                <li><a href="/uses">uses</a></li>
+            </ul>
+            <h2>meta</h2>
+            <ul>
+                <li><a href="/colophon">colophon</a></li>
+                <li><a href="https://github.com/auctumnus/page">source</a></li>
+            </ul>
+        </nav>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>autumn {{ now() | date(format="%Y") }} 🅭🅯🄎 it is still possible to create beauty, on this earth, in our time</footer>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+main h1 {
+    padding-bottom: 0.375rem;
+    border-bottom: 1px dotted color-mix(in lab, var(--link), black 20%);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--fg-2);
+    font-style: italic;
+    padding-bottom: 1rem;
+}
+
+.meta .time {
+    font-size: small;
+    color: var(--fg-2);
+    :not(:last-child)::after {
+        content: "·";
+        margin-left: 8px;
+        margin-right: 6px;
+    }
+}
+
+
+.footnote-reference a, .footnote-definition sup {
+        &::before {
+            content: "[";
+            display: inline;
+        }
+        &::after {
+            content: "]";
+            display: inline;
+        }
+}
+
+.footnote-definition {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    sup {
+        font-size: inherit;
+        display: inline;
+        &::after {
+            content: ']:'
+        }
+    }
+    p {
+        margin: 0;
+    }
+
+    + .footnote-definition {
+        margin-top: 0.875rem;
+    }
+}
+
+.prose {
+    max-width: 70ch;
+    ul, ol {
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+        padding-left: 1.625em;
+
+        > li {
+            padding-left: 0.375em;
+            &::marker {
+                font-weight: 400;
+            }
+
+            > *:first-child {
+                margin-top: 1.25em;
+            }
+
+            > *:last-child {
+                margin-bottom: 1.25em;
+            }
+        }
+
+        ul, ol {
+            margin-top: 0.75em;
+            margin-bottom: 0.75em;
+        }
+    }
+    .aside {
+        max-width: 70ch;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        line-height: 1.33333;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 1.25em;
+        margin-top: 1.6em;
+        margin-bottom: 0.6em;
+        line-height: 1.6;
+    }
+
+    h4, h5 {
+        font-weight: 600;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        line-height: 1.5
+    }
+
+    :where(h2 + *), :where(h3 + *), :where(h4 + *), :where(h5 + *), :where(h6 + *) {
+        margin-top: 0;
+    }
+
+    p:not(.footnote-definition >) {
+        margin-top: 1.25em;
+        margin-bottom: 1.25em;
+
+    }
+
+    code {
+        font-family: 'Fira Code', 'Courier New', Courier, monospace;
+        font-size: 0.875em;
+        padding: 0.125em 0.25em;
+        background-color: var(--bg-1);
+        border-radius: 0.25em;
+    }
+
+    figure img {
+        max-width: 100%;
+        display: block;
+        margin: 1rem auto;
+    }
+
+
+}

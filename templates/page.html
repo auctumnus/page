@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{ page.title }} | autumn's page</title>
+<script src="/page.js" defer></script>
+<link rel="stylesheet" href="/page.css">
+{% endblock head %}
+
+{% block content %}
+<h1>{{ page.title }}</h1>
+{% if page.description %}<span class="subtitle">{{ page.description }}</span>{% endif %}
+<div class="meta">
+    <div class="time">
+        <span>posted {{ page.date | date(format="%Y-%m-%d") }}</span>
+        {% if page.updated %}<span>updated {{ page.updated | date(format="%Y-%m-%d") }}</span>{% endif %}
+        <span>{{ page.reading_time }} min read</span>
+        <span>{{ page.word_count }} words</span>
+    </div>
+    {% if page.tags %}<span>{{ page.tags | join(sep=", ") }}</span>{% endif %}
+</div>
+<div class="prose">
+    {{ page.content | safe }}
+</div>
+{% endblock content %}

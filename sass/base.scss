@@ -1,0 +1,215 @@
+@use "util" as *;
+
+:root {
+    --color-900: #1a1c18;
+    --color-800: #2f312d;
+    --color-700: #464743;
+    --color-600: #5d5f5a;
+    --color-500: #767872;
+    --color-400: #90918b;
+    --color-300: #abaca6;
+    --color-200: #c6c7c0;
+    --color-100: #e3e3dc;
+    --card-bg: #e8e9e2;
+
+    --secondary-bg: #C5D2E7;
+    --on-secondary: #121C2B;
+    --secondary-link: #4870AD;
+
+    --bg: var(--color-100);
+    --bg-1: var(--color-200);
+    --bg-2: var(--color-300);
+    --fg: var(--color-900);
+    --fg-1: var(--color-800);
+    --fg-2: var(--color-700);
+
+    --link: #769875;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: var(--color-900);
+        --bg-1: var(--color-800);
+        --bg-2: var(--color-700);
+        --fg: var(--color-100);
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Source Serif 4', 'Noto Serif', 'Times New Roman', Times, 'serif';
+    color: var(--fg);
+    background-color: var(--bg-2);
+    min-height: 100vh;
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        'nav main'
+        'nav footer';
+    background-color: var(--bg);
+    min-height: 100vh;
+
+    @include desktop {
+        margin: 1rem;
+        border-radius: 1rem;
+        min-height: calc(100vh - 2rem);
+
+        min-width: calc(70ch + 11rem);
+
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Crimson Pro', 'Noto Serif', 'Times New Roman', Times, 'serif';
+    text-wrap: balance;
+}
+
+nav {
+    grid-area: nav;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    min-width: 11rem;
+
+    background-color: var(--bg-1);
+
+    @include desktop {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    img {
+        width: 5rem;
+        border-radius: 100%;
+        margin-top: 2rem;
+    }
+
+    h2 {
+        width: 100%;
+        margin: 1rem 0 0 0;
+        border-bottom: 1px dotted color-mix(in lab, var(--link), black 20%);
+        color: var(--fg-1);
+    }
+
+    h1 {
+        margin: 1rem 0 3rem 0;
+    }
+
+    ul {
+        margin: 0.375rem 0;
+        padding-left: 1rem;
+
+        a {
+            color: color-mix(in lab, var(--link), black 20%);
+            font-weight: 600;
+
+            &:hover {
+                color: color-mix(in lab, var(--link), black 30%);
+            }
+        }
+    }
+}
+
+footer {
+    grid-area: footer;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    color: var(--fg-2);
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+        color: color-mix(in lab, var(--link), black 10%);
+        text-decoration: underline;
+    }
+}
+
+p {
+    max-width: 70ch;
+    text-wrap: pretty;
+}
+
+.gloss {
+    display: flex;
+    flex-direction: column;
+
+    .gloss-items {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .gloss-item {
+        display: flex;
+        flex-direction: column;
+
+        .word {
+            font-style: italic;
+        }
+    }
+
+    .morpheme-cat {
+        font-variant: small-caps;
+    }
+
+    + .gloss {
+        margin-top: 1rem;
+    }
+
+    .gloss-items, .gloss-definition {
+        margin-left: 1rem;
+    }
+}
+
+details.aside {
+    background-color: var(--secondary-bg);
+    color: var(--on-secondary);
+    border-radius: 1rem;
+    margin: 1rem 0;
+
+    a {
+        color: var(--secondary-link);
+
+        &:hover {
+            color: color-mix(in lab, var(--secondary-link), black 10%);
+        }
+    }
+
+    summary {
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    > *:not(summary) {
+        padding: 1rem;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}

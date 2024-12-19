@@ -1,0 +1,17 @@
+{% set _words = words | split(pat=" ") %}
+{% set _morphemes = morphemes | split(pat=" ") %}
+
+<div class="gloss">
+    {% if title %}<span class="gloss-title">{{ title }}</span>{% endif %}
+    <div class="gloss-items">
+        {% for word in _words %}
+            <div class="gloss-item">
+                <span class="word">{{ word }}</span>
+                <span class="morpheme">
+                    {{ _morphemes | nth(n=loop.index0) }}
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+    <span class="gloss-definition">“{{ english }}”</span>
+</div>
