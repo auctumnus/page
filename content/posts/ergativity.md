@@ -21,9 +21,9 @@ interested in in regards to morphosyntactic alignment.
 
 - **S**, the subject of an intransitive verb (ones like "flow", "run", or "move"),
 - **A**, the agent of a transitive verb (ones like "watch", "hug", or "eat"),
-- and **P**, the patient of a transitive verb. (Some authors also call this **O** for object.)
+- **P**, the patient of a transitive verb. (Some authors also call this **O** for object.)
 
-There are three main ways that languages mark these arguments: direct, nominative-accusative, and ergative-absolutive.
+There are three main ways that languages mark these arguments: **direct**, **nominative-accusative**, and **ergative-absolutive**.
 
 <figure>
     <img src="/img/syntax/morphosyntax.png" alt="A diagram showing three kinds of alignment">

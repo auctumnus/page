@@ -1,7 +1,13 @@
+@use "util" as *;
+
 main h1 {
     padding-bottom: 0.375rem;
     border-bottom: 1px dotted color-mix(in lab, var(--link), black 20%);
     margin-bottom: 0.5rem;
+
+    @include mobile {
+        margin-top: 2.5rem;
+    }
 }
 
 .subtitle {
