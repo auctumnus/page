@@ -67,7 +67,8 @@ noun phrases, as well as morphologically for pronouns, and is found in almost al
 {% aside(summary=`What exactly do I mean when I say "underlyingly"?`) %}
 
 Even if a language doesn't have overt morphological signs of its alignment, it can still be said to have a certain alignment.
-For example: blah blah blah
+For example: we can use the relative clause structure to figure out what is more likely to be relativised,
+or we can find what the verb agrees with, or we can find where clauses connect (is it the nominative, the absolutive, etc.)
 
 {% end %}
 
@@ -129,8 +130,8 @@ tell you very much about the language. Even so-called nominative-accusative lang
 
 {{gloss(
     title="Japanese (Japonic)",
-    words="Tarō-ni eigo-ga dekir-u",
-    morphemes="Tarō-DAT English-NOM understand-PRES",
+    words="Tarō-ni eigo-ga dekiru",
+    morphemes="Tarō-DAT English-NOM understand",
     english="Tarō understands English."
 )}}[^ura2000]
 
@@ -161,7 +162,7 @@ some line across which one kind of clause is marked ergatively and another is ma
 language there exists a lot of nuance about how exactly that forms!
 
 In Coon (2013)[^coon2013], the author goes over 3 different kinds of ergative splits: "ergative-to-neutral",
-"ergative-to-extended-ergative", and "ergative-to-ABS-OBL". Notably, "ergative-to-accusative" does not appear in this list!
+"ergative-to-extended-ergative", and "ergative-to-ABS-OBL". Notably, **"ergative-to-accusative" does not appear in this list!**
 All of the patterns discussed here don't actually use any sort of nominative or accusative case in non-ergative clauses.
 
 #### Ergative-to-neutral
@@ -254,7 +255,7 @@ similarly to an accusative case in transitive sentences:
 
 {{gloss(
     title="Samoan (Austronesian; Samoan Islands)",
-    words="Na va'ai-a e la tama le i'a.",
+    words="Na va'ai-a e le tama le i'a.",
     morphemes="PST look.at-PRFV ERG the boy the fish",
     english="The boy looked at the fish."
 )}}
@@ -529,8 +530,8 @@ are interesting!
 [wals-1]: https://wals.info/chapter/98
 [wals-2]: https://wals.info/combinations/98A_100A
 
-[^handbookcase]: Bickel, B. & Nichols, J. (2009). Case marking and alignment. In A. Malchukov & A. Spencer (Eds.), The Oxford Handbook of Case (pp. 304-321). New York, NY: Oxford University Press.
 [^morphosyntax]: By Votre Idéolinguiste Local - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=135265037
+[^handbookcase]: Bickel, B. & Nichols, J. (2009). Case marking and alignment. In A. Malchukov & A. Spencer (Eds.), The Oxford Handbook of Case (pp. 304-321). New York, NY: Oxford University Press.
 [^belhareabs]: The original source marks this as nominative, but I think this is due to their more in-depth analysis.
 For the purposes of this article, I'm marking it as absolutive - the point, anyways, is that the object of the transitive verb patterns
 with the subject of the intransitive verb.

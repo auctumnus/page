@@ -1,8 +1,10 @@
 @use "util" as *;
 
 :root {
+    --color-950: #0d0f0b;
     --color-900: #1a1c18;
     --color-800: #2f312d;
+    --color-750: #3a3c38;
     --color-700: #464743;
     --color-600: #5d5f5a;
     --color-500: #767872;
@@ -30,8 +32,13 @@
     :root {
         --bg: var(--color-900);
         --bg-1: var(--color-800);
-        --bg-2: var(--color-700);
+        --bg-2: var(--color-950);
         --fg: var(--color-100);
+        --fg-1: var(--color-200);
+        --fg-2: var(--color-300);
+
+        --secondary-bg: #121C2B;
+        --on-secondary: #C5D2E7;
     }
 }
 
